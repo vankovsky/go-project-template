@@ -1,0 +1,26 @@
+---
+app:
+  agent_id: e978dacd-a4f6-409d-ae83-aba2562018ff
+  environment: dev
+
+postgresql:
+  query_timeout: 60s
+  uri: postgres://ivan:bnty7812@localhost:5432/clevalert?sslmode=disable
+
+checks:
+  dns:
+    check_interval: 3s
+
+  http:
+    check_interval: 600s
+
+  ping:
+    check_interval: 60s
+    attempts: 5
+
+http_server:
+  address: localhost
+  port: 9090
+
+sentry:
+  # dsn: https://b3066107683f4e3788a1ccc655c4020c@o433913.ingest.sentry.io/5390080
